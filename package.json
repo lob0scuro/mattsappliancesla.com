@@ -11,5 +11,13 @@
   "description": "",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lob0scuro/mattsappliancesla.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lob0scuro/mattsappliancesla.com/issues"
+  },
+  "homepage": "https://github.com/lob0scuro/mattsappliancesla.com#readme"
 }
