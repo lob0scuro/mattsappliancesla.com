@@ -60,7 +60,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 /*============================
@@ -72,11 +71,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
-  height: 100%;
   max-width: 1200px;
-  padding: 20px;
+  padding-top: 120px;
 }
 
 /*============================
@@ -88,4 +85,424 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--white);
+  z-index: 1000;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header.hidden {
+  transform: translateY(-100%);
+}
+
+header img {
+  width: 8rem;
+}
+
+/*============================
+FOOTER STYLES
+============================*/
+footer {
+  width: 100%;
+  padding: 60px 20px;
+  text-align: center;
+  background-color: var(--dark-blue);
+  color: var(--light-blue);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+footer img {
+  width: 8rem;
+}
+footer > div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/*============================
+HERO SECTION STYLES
+============================*/
+section#hero {
+  position: relative;
+  width: 100%;
+  min-height: 30rem;
+  overflow: hidden;
+  color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  margin-bottom: 1rem;
+}
+
+#bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+section#hero h1 {
+  text-align: center;
+}
+section#hero h3 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+section#hero p {
+  text-align: center;
+  margin-top: 15px;
+  max-width: 600px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+section#hero button {
+  margin-top: 20px;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--primary-blue);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+section#hero button:hover {
+  background-color: var(--dark-blue);
+}
+
+/*============================
+WHO ARE WE SECTION STYLES
+============================*/
+
+section#who-we-are {
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding-block: 1rem;
+}
+
+div.who-are-we-text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+div.who-are-we-text-container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+div.who-are-we-text-container p {
+  width: 80%;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.carousel {
+  position: relative;
+  width: 400px;
+  max-width: 600px;
+  height: 350px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-inner img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/*============================
+SOCIAL MEDIA SECTION STYLES
+============================*/
+
+section#social-media {
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding-block: 1rem;
+
+  background-color: var(--gray-blue);
+  color: var(--dark-blue);
+
+  border-top: 14px solid var(--dark-blue);
+  border-radius: 50% / 0 0 70px 70px;
+}
+section#social-media h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+div.social-media-icons {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+div.social-media-icons a {
+  font-size: 3.5rem;
+  color: var(--dark-blue);
+  transition: color 0.3s ease;
+}
+div.social-media-icons a:hover {
+  color: var(--primary-blue);
+}
+
+/*============================
+VALIDATION SECTION STYLES
+============================*/
+
+section#validation {
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: var(--dark-blue);
+}
+section#validation div.validation-card {
+  background-color: var(--light-blue);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 75%;
+  max-width: 500px;
+}
+section#validation div.validation-card img {
+  width: 250px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/*============================
+APPLIANCE BRANDS SECTION STYLES
+============================*/
+
+section#appliance-brands {
+  width: 100%;
+  height: 25rem;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  border-radius: 50% / 70px 70px 0 0;
+  border-bottom: 14px solid var(--dark-blue);
+  background-color: var(--gray-blue);
+}
+section#appliance-brands h3 {
+  font-size: 1.6rem;
+  margin-block: 24px;
+  color: var(--dark-blue);
+}
+
+div.brands-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+div.brands-logos img {
+  width: 100px;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+#ge-coin {
+  width: 50px;
+}
+
+/*============================
+IMAGE BANNER SECTION STYLES
+============================*/
+
+section#image-banner {
+  width: 100%;
+  height: 24rem;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("/images/bg-images/kitchen.svg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section#image-banner h2 {
+  font-size: 2rem;
+  color: var(--white);
+  font-weight: 400;
+}
+section#image-banner h2 span {
+  color: var(--gray-blue);
+  font-size: 2.8rem;
+  margin-left: 4px;
+  font-weight: 300;
+}
+
+/*============================
+PAYMENT PLANS SECTION STYLES
+============================*/
+
+section#payment-plans {
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section#payment-plans div.payment-plan {
+  /* background-color: var(--light-blue); */
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+}
+
+section#payment-plans div.payment-plan h4 {
+  font-size: 1.8rem;
+  color: var(--dark-blue);
+}
+
+section#payment-plans div.payment-plan img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+section#payment-plans div.payment-plan button {
+  margin-top: 10px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--primary-blue);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+section#payment-plans div.payment-plan button:hover {
+  background-color: var(--dark-blue);
+}
+
+/*============================
+GALLERY SECTION STYLES
+============================*/
+
+section#gallery {
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--dark-blue);
+}
+section#gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/*===========================
+LIFETIME WARRANTY SECTION STYLES
+============================*/
+
+section#lifetime-warranty {
+  width: 100%;
+  height: 24rem;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  text-align: center;
+  color: var(--white);
+
+  background-image: url("/images/bg-images/store-front.svg");
+  background-position: center center;
+  background-size: cover;
+}
+
+section#lifetime-warranty button {
+  margin-top: 10px;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--primary-blue);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+section#lifetime-warranty button:hover {
+  background-color: var(--dark-blue);
 }
