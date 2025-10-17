@@ -23,11 +23,26 @@
   <body>
     {% include "./header.njk" %}
     <main>
+      <div id="bubble-container">
+        <div id="bubble-inner">
+          <nav id="bubble-nav" class="hidden">
+            <a href="/">Home</a>
+            <a href="locations">Locations</a>
+            <a href="#">Service</a>
+            <a href="about">About Us</a>
+            <a id="payments-menu-link" href="">Payment Plans</a>
+          </nav>
+          <button id="menu-bubble">
+            <i class="fa-solid fa-compass"></i>
+          </button>
+        </div>
+      </div>
       {{ content | safe }}
     </main>
     {% include "./footer.njk" %}
     <script src="/js/carousel.js" defer></script>
     <script src="/js/gallery.js" defer></script>
     <script src="/js/header.js" defer></script>
+    <script src="/js/menu-bubble.js" defer></script>
   </body>
 </html>
