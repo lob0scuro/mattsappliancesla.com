@@ -77,12 +77,14 @@ MENU BUBBLE
   z-index: 2000;
 
   scroll-behavior: smooth;
+  width: fit-content;
 }
 #bubble-inner {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  width: 100%;
 }
 #bubble-container nav {
   display: flex;
@@ -90,12 +92,13 @@ MENU BUBBLE
   align-items: flex-end;
   gap: 1rem;
   position: absolute;
-  top: -400px;
+  top: -380px;
   right: 0px;
   height: auto;
   font-size: 2rem;
+  width: fit-content;
 
-  padding: 10px 10px 10px 80px;
+  padding: 10px 10px 18px 80px;
   border-radius: 8px;
   background-color: var(--gray-blue);
   color: var(--black);
@@ -107,6 +110,7 @@ MENU BUBBLE
   transition: opacity 0.3s ease, transform 0.25s ease, translate 0.8s ease;
   transform: translateY(0);
 }
+
 #bubble-container nav a:hover {
   color: var(--white);
   transform: translate(-20px, -8px);
@@ -115,12 +119,12 @@ MENU BUBBLE
 
 #bubble-container nav a#payments-menu-link {
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   width: 100%;
   color: var(--primary-blue);
 }
 #bubble-container nav a#payments-menu-link:hover {
-  color: var(--dark-blue);
+  color: var(--light-blue);
 }
 
 #bubble-container nav.hidden {
@@ -270,7 +274,7 @@ section#hero p {
   font-weight: 500;
 }
 
-section#hero button {
+section#hero a {
   margin-top: 20px;
   padding: 14px 20px;
   font-size: 1rem;
@@ -526,10 +530,13 @@ section#payment-plans div.payment-plan img {
   margin-bottom: 10px;
 }
 
-section#payment-plans div.payment-plan button {
+a.learn-more {
   margin-top: 10px;
-  padding: 10px 14px;
-  font-size: 1rem;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  padding: 20px 4px;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--white);
   background-color: var(--primary-blue);
@@ -538,14 +545,29 @@ section#payment-plans div.payment-plan button {
   cursor: pointer;
   transition: background-color 0.3s ease;
   align-self: center;
+
+  box-shadow: -2px 2px 6px var(--black);
 }
-section#payment-plans div.payment-plan button:hover {
-  background-color: var(--dark-blue);
+a.learn-more:hover {
+  background-color: var(--gray-blue);
+}
+
+p.home-screen-payments-footer {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark-blue);
+  text-align: center;
 }
 
 /*============================
 GALLERY SECTION STYLES
 ============================*/
+
+img.gallery-logo {
+  width: 250px;
+  margin: 2rem 0 10px 0;
+}
 
 section#gallery {
   width: 100%;
@@ -612,14 +634,6 @@ LOCATION SECTION STYLES
   gap: 2rem;
 }
 
-.location {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
-  text-align: center;
-}
-
 .locations-hero {
   width: 100%;
   display: flex;
@@ -628,10 +642,196 @@ LOCATION SECTION STYLES
   justify-content: center;
 
   background-color: var(--light-blue);
-  height: 20rem;
+  height: 14rem;
+}
+.locations-hero p {
+  font-size: 1.2rem;
+  color: var(--dark-blue);
+  font-weight: 700;
+}
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding-block: 2rem;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+  width: 90%;
+  box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.location h3 {
+  font-size: 1.8rem;
+  color: var(--dark-blue);
+  margin-bottom: 10px;
+}
+
+.location h5 {
+  font-size: 1.2rem;
+  color: var(--primary-blue);
+  margin-bottom: 8px;
 }
 
 .location img {
-  width: 300px;
+  width: 350px;
   border-radius: 4px;
+}
+
+.locale-button {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 10px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/*===========================
+ABOUT SECTION STYLES
+============================*/
+
+section#about-hero {
+  margin-top: 2.1rem;
+  text-align: center;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*===========================
+PAYMENT PLANS SECTION STYLES
+============================*/
+
+section#payment-plans {
+  margin-top: 2.1rem;
+  width: 100%;
+  padding: 0;
+}
+
+div.payment-plans-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+
+  background-color: var(--light-blue);
+  width: 100%;
+  padding-block: 2rem;
+}
+
+.payment-plans-hero h1 {
+  font-size: 2rem;
+  width: 90%;
+  color: var(--dark-blue);
+  margin-top: 1rem;
+}
+
+.payment-plans-hero p {
+  font-size: 1.1rem;
+  color: var(--dark-blue);
+  margin-bottom: 1rem;
+  width: 80%;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  width: 80%;
+}
+
+.plan h2 {
+  background-color: var(--primary-blue);
+  color: var(--light-blue);
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  height: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-plan-info {
+  border-radius: 0 0 8px 8px;
+  background-color: var(--light-blue);
+  padding: 1rem 0.4rem;
+}
+
+.payment-plan-info img {
+  width: 250px;
+}
+.payment-plan-info h4 {
+  font-size: 1rem;
+  color: var(--dark-blue);
+  font-weight: 700;
+  margin-top: 1rem;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.payment-plan-info ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+p.need-to-know {
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: underline;
+  color: var(--dark-blue);
+  margin-bottom: 0.5rem;
+}
+p.plan-info-footer {
+  font-size: 1.2rem;
+  width: 70%;
+  margin: 3rem auto 0.4rem auto;
+}
+
+div.payment-plan-info {
+  text-align: center;
+}
+
+a.call-button {
+  color: var(--dark-blue);
+  font-weight: 700;
+}
+
+.plans-banner {
+  width: 100%;
+  height: 18rem;
+  background-color: var(--light-blue);
+  color: var(--white);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+
+  background-image: url("/images/bg-images/kitchen.svg");
+  background-position: center center;
+  background-size: cover;
+
+  text-align: center;
+  padding: 0;
 }
