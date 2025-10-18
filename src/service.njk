@@ -1,0 +1,98 @@
+---
+title: "Services"
+layout: "layout.njk"
+---
+
+<section id="service-block">
+  <div class="service-hero">
+    <h1>Appliance Repair.</h1>
+    <p>
+      At Matt's Appliances, we are committed to providing top-notch service to
+      our customers. Our experienced technicians are here to help you with all
+      your appliance needs.
+    </p>
+  </div>
+  <div class="service-descriptions">
+    <div class="service fridges">
+      <h2>Refrigerator Repair</h2>
+      <p>
+        Is your refrigerator not cooling properly? Our skilled technicians can
+        diagnose and fix any issues to keep your food fresh and your drinks
+        cold.
+      </p>
+    </div>
+    <div class="service washers-and-dryers">
+      <h2>Washer & Dryer Repair</h2>
+      <p>
+        From leaks to spin cycle problems, our team can handle all washer and
+        dryer repairs. We'll have your laundry routine back on track in no time.
+      </p>
+    </div>
+    <div class="service ranges">
+      <h2>Range & Oven Repair</h2>
+      <p>
+        Whether your oven isn't heating or your stovetop burners are acting up,
+        our technicians have the expertise to get your cooking appliances
+        functioning perfectly again.
+      </p>
+    </div>
+  </div>
+  <div class="service-contact-form">
+    <h2>Ready to Experience A-1 Service?</h2>
+    <h3>
+      Fill out the form below to get in touch with our service department and
+      one of our team members will reach out to schedule your service!
+    </h3>
+    <form action="#" id="service-form">
+      <div>
+        <label for="first_name">First Name</label>
+        <input type="text" name="first_name" id="first_name" required />
+      </div>
+      <div>
+        <label for="last_name">Last Name</label>
+        <input type="text" name="last_name" id="last_name" required />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <div>
+        <label for="appliance-type">Appliance Type</label>
+        <select name="appliance_type" id="appliance_type">
+          <option value="">--Select Appliance Type</option>
+          <option value="fridge">Refrigerator</option>
+          <option value="washer">Washer</option>
+          <option value="dryer">Dryer</option>
+          <option value="range">Range</option>
+        </select>
+      </div>
+      <div>
+        <label for="model">Model No.</label>
+        <input type="text" name="model" id="model" />
+      </div>
+      <div>
+        <label for="serial">Serial No.</label>
+        <input type="text" name="serial" id="serial" />
+      </div>
+      <div>
+        <label for="issue-description">Issue Description</label>
+        <textarea
+          name="issue_description"
+          id="issue_description"
+          rows="4"
+          required
+        ></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <img
+      src="/images/matts-logo.png"
+      class="form-logo"
+      alt="Matt's Appliances logo"
+    />
+  </div>
+  <p class="or-call">
+    **Call us at (337) 244-7589 for immediate assistance or to schedule a
+    service appointment.
+  </p>
+</section>

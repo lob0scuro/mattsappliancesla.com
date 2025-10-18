@@ -170,7 +170,7 @@ main {
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  padding-top: 120px;
+  padding-top: 150px;
 }
 
 /*============================
@@ -275,16 +275,19 @@ section#hero p {
 }
 
 section#hero a {
-  margin-top: 20px;
-  padding: 14px 20px;
-  font-size: 1rem;
+  margin-top: 40px;
+  width: 80%;
+  text-align: center;
+  padding: 22px 0;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--white);
   background-color: var(--primary-blue);
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  box-shadow: -2px 2px 3px var(--black);
 }
 section#hero button:hover {
   background-color: var(--dark-blue);
@@ -502,6 +505,7 @@ section#payment-plans {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 3rem;
 }
 
 section#payment-plans div.payment-plan {
@@ -566,10 +570,11 @@ GALLERY SECTION STYLES
 
 img.gallery-logo {
   width: 250px;
-  margin: 2rem 0 10px 0;
+  margin: 0rem 0 10px 0;
 }
 
 section#gallery {
+  margin-top: 3rem;
   width: 100%;
   padding: 40px 20px;
   display: flex;
@@ -578,6 +583,7 @@ section#gallery {
   justify-content: center;
   text-align: center;
   color: var(--dark-blue);
+  background-color: #ebebeb;
 }
 section#gallery h2 {
   font-size: 2rem;
@@ -626,7 +632,6 @@ LOCATION SECTION STYLES
 ============================*/
 
 #locations-main-block {
-  margin-top: 2.1rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -685,6 +690,7 @@ LOCATION SECTION STYLES
 .location img {
   width: 350px;
   border-radius: 4px;
+  box-shadow: -2px 3px 8px var(--black);
 }
 
 .locale-button {
@@ -704,7 +710,6 @@ ABOUT SECTION STYLES
 ============================*/
 
 section#about-hero {
-  margin-top: 2.1rem;
   text-align: center;
   height: 20rem;
   display: flex;
@@ -714,11 +719,10 @@ section#about-hero {
 }
 
 /*===========================
-PAYMENT PLANS SECTION STYLES
+PAYMENT PLANS PAGE STYLES
 ============================*/
 
 section#payment-plans {
-  margin-top: 2.1rem;
   width: 100%;
   padding: 0;
 }
@@ -755,6 +759,9 @@ div.payment-plans-hero {
   align-items: center;
   margin: 2rem auto;
   width: 80%;
+
+  box-shadow: -2px 2px 8px var(--black);
+  border-radius: 8px;
 }
 
 .plan h2 {
@@ -767,6 +774,9 @@ div.payment-plans-hero {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  box-shadow: 0 3px 10px var(--black);
+  z-index: 5;
 }
 
 .payment-plan-info {
@@ -834,4 +844,153 @@ a.call-button {
 
   text-align: center;
   padding: 0;
+}
+
+/*===========================
+SERVICE PAGE STYLES
+============================*/
+
+section#service-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light-blue);
+  height: 14rem;
+  padding-inline: 1rem;
+  text-align: center;
+}
+
+.service-hero h1 {
+  font-size: 2rem;
+  color: var(--dark-blue);
+  margin-bottom: 10px;
+}
+
+.service-descriptions {
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  width: 90%;
+  box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.service h2 {
+  font-size: 1.8rem;
+  color: var(--dark-blue);
+  margin-bottom: 10px;
+}
+
+/*Service -form*/
+.service-contact-form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-block: 6rem;
+}
+.service-contact-form h2 {
+  font-size: 1.6rem;
+  color: var(--dark-blue);
+  text-align: center;
+}
+
+.service-contact-form h3 {
+  font-size: 1rem;
+  color: var(--primary-blue);
+  text-align: center;
+}
+
+form#service-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-block: 1rem;
+  padding-bottom: 4rem;
+  width: 90%;
+}
+
+form#service-form div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+form#service-form label {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--primary-blue);
+}
+
+form#service-form select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--gray-blue);
+  border-radius: 5px;
+  font-size: 18px;
+}
+form#service-form select option {
+  font-size: 18px;
+}
+
+form#service-form input,
+form#service-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--gray-blue);
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+form#service-form button {
+  margin-top: 10px;
+  padding: 20px 20px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--primary-blue);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+form#service-form button:hover {
+  background-color: var(--dark-blue);
+}
+
+img.form-logo {
+  width: 250px;
+}
+
+p.or-call {
+  font-size: 1rem;
+  width: 70%;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--dark-blue);
+  text-align: center;
+  margin-bottom: 4rem;
 }
